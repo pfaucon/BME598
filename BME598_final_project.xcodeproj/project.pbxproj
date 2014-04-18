@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993328DB1900C23300529337 /* XivelyTimepoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 993328DA1900C23300529337 /* XivelyTimepoint.m */; };
+		993328E01900D94100529337 /* CFGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 993328DF1900D94100529337 /* CFGraphView.m */; };
+		99332A7A1900FC0000529337 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99332A781900FC0000529337 /* libCorePlot-CocoaTouch.a */; };
+		99332A7B1900FC0000529337 /* CorePlotHeaders in Resources */ = {isa = PBXBuildFile; fileRef = 99332A791900FC0000529337 /* CorePlotHeaders */; };
+		99332A7D1900FC3B00529337 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99332A7C1900FC3B00529337 /* QuartzCore.framework */; };
+		99332A7F1900FC3F00529337 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99332A7E1900FC3F00529337 /* Accelerate.framework */; };
 		99569C5A18FF36D600A211F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99569C5918FF36D600A211F3 /* Foundation.framework */; };
 		99569C5C18FF36D600A211F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99569C5B18FF36D600A211F3 /* CoreGraphics.framework */; };
 		99569C5E18FF36D600A211F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99569C5D18FF36D600A211F3 /* UIKit.framework */; };
@@ -21,6 +27,8 @@
 		99569C7B18FF36D600A211F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99569C5D18FF36D600A211F3 /* UIKit.framework */; };
 		99569C8318FF36D600A211F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99569C8118FF36D600A211F3 /* InfoPlist.strings */; };
 		99569C8518FF36D600A211F3 /* BME598_final_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99569C8418FF36D600A211F3 /* BME598_final_projectTests.m */; };
+		99569C9018FF372200A211F3 /* XivelyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99569C8F18FF372200A211F3 /* XivelyManager.m */; };
+		99569C9318FF3DC000A211F3 /* XivelyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 99569C9218FF3DC000A211F3 /* XivelyData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		993328D91900C23300529337 /* XivelyTimepoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XivelyTimepoint.h; sourceTree = "<group>"; };
+		993328DA1900C23300529337 /* XivelyTimepoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XivelyTimepoint.m; sourceTree = "<group>"; };
+		993328DE1900D94100529337 /* CFGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFGraphView.h; sourceTree = "<group>"; };
+		993328DF1900D94100529337 /* CFGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFGraphView.m; sourceTree = "<group>"; };
+		99332A781900FC0000529337 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
+		99332A791900FC0000529337 /* CorePlotHeaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CorePlotHeaders; sourceTree = "<group>"; };
+		99332A7C1900FC3B00529337 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		99332A7E1900FC3F00529337 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		99569C5618FF36D600A211F3 /* BME598_final_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BME598_final_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99569C5918FF36D600A211F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99569C5B18FF36D600A211F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +69,10 @@
 		99569C8018FF36D600A211F3 /* BME598_final_projectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BME598_final_projectTests-Info.plist"; sourceTree = "<group>"; };
 		99569C8218FF36D600A211F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		99569C8418FF36D600A211F3 /* BME598_final_projectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BME598_final_projectTests.m; sourceTree = "<group>"; };
+		99569C8E18FF372200A211F3 /* XivelyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XivelyManager.h; sourceTree = "<group>"; };
+		99569C8F18FF372200A211F3 /* XivelyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XivelyManager.m; sourceTree = "<group>"; };
+		99569C9118FF3DC000A211F3 /* XivelyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XivelyData.h; sourceTree = "<group>"; };
+		99569C9218FF3DC000A211F3 /* XivelyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XivelyData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +80,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99332A7F1900FC3F00529337 /* Accelerate.framework in Frameworks */,
+				99332A7D1900FC3B00529337 /* QuartzCore.framework in Frameworks */,
 				99569C5C18FF36D600A211F3 /* CoreGraphics.framework in Frameworks */,
 				99569C5E18FF36D600A211F3 /* UIKit.framework in Frameworks */,
 				99569C5A18FF36D600A211F3 /* Foundation.framework in Frameworks */,
+				99332A7A1900FC0000529337 /* libCorePlot-CocoaTouch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +124,8 @@
 		99569C5818FF36D600A211F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99332A7E1900FC3F00529337 /* Accelerate.framework */,
+				99332A7C1900FC3B00529337 /* QuartzCore.framework */,
 				99569C5918FF36D600A211F3 /* Foundation.framework */,
 				99569C5B18FF36D600A211F3 /* CoreGraphics.framework */,
 				99569C5D18FF36D600A211F3 /* UIKit.framework */,
@@ -117,8 +142,12 @@
 				99569C6B18FF36D600A211F3 /* Main.storyboard */,
 				99569C6E18FF36D600A211F3 /* ViewController.h */,
 				99569C6F18FF36D600A211F3 /* ViewController.m */,
+				993328DE1900D94100529337 /* CFGraphView.h */,
+				993328DF1900D94100529337 /* CFGraphView.m */,
+				99569C9418FF3FDA00A211F3 /* Models */,
 				99569C7118FF36D600A211F3 /* Images.xcassets */,
 				99569C6018FF36D600A211F3 /* Supporting Files */,
+				99332A791900FC0000529337 /* CorePlotHeaders */,
 			);
 			path = BME598_final_project;
 			sourceTree = "<group>";
@@ -126,6 +155,7 @@
 		99569C6018FF36D600A211F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99332A781900FC0000529337 /* libCorePlot-CocoaTouch.a */,
 				99569C6118FF36D600A211F3 /* BME598_final_project-Info.plist */,
 				99569C6218FF36D600A211F3 /* InfoPlist.strings */,
 				99569C6518FF36D600A211F3 /* main.m */,
@@ -150,6 +180,19 @@
 				99569C8118FF36D600A211F3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99569C9418FF3FDA00A211F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99569C8E18FF372200A211F3 /* XivelyManager.h */,
+				99569C8F18FF372200A211F3 /* XivelyManager.m */,
+				99569C9118FF3DC000A211F3 /* XivelyData.h */,
+				99569C9218FF3DC000A211F3 /* XivelyData.m */,
+				993328D91900C23300529337 /* XivelyTimepoint.h */,
+				993328DA1900C23300529337 /* XivelyTimepoint.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +274,7 @@
 				99569C7218FF36D600A211F3 /* Images.xcassets in Resources */,
 				99569C6418FF36D600A211F3 /* InfoPlist.strings in Resources */,
 				99569C6D18FF36D600A211F3 /* Main.storyboard in Resources */,
+				99332A7B1900FC0000529337 /* CorePlotHeaders in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				99569C7018FF36D600A211F3 /* ViewController.m in Sources */,
+				993328E01900D94100529337 /* CFGraphView.m in Sources */,
 				99569C6A18FF36D600A211F3 /* AppDelegate.m in Sources */,
+				99569C9018FF372200A211F3 /* XivelyManager.m in Sources */,
 				99569C6618FF36D600A211F3 /* main.m in Sources */,
+				993328DB1900C23300529337 /* XivelyTimepoint.m in Sources */,
+				99569C9318FF3DC000A211F3 /* XivelyData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +427,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BME598_final_project/BME598_final_project-Prefix.pch";
 				INFOPLIST_FILE = "BME598_final_project/BME598_final_project-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BME598_final_project",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +445,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BME598_final_project/BME598_final_project-Prefix.pch";
 				INFOPLIST_FILE = "BME598_final_project/BME598_final_project-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BME598_final_project",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +514,7 @@
 				99569C8A18FF36D600A211F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99569C8B18FF36D600A211F3 /* Build configuration list for PBXNativeTarget "BME598_final_projectTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +523,7 @@
 				99569C8D18FF36D600A211F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

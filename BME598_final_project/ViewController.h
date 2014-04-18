@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XivelyManager.h"
+#import "XivelyData.h"
+
 @interface ViewController : UIViewController
 
 @end

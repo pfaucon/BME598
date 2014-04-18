@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *humidityLabel;
+@property (strong, nonatomic) IBOutlet UILabel *temperatureLabel;
+@property (strong, nonatomic) IBOutlet UITextField *desiredTempField;
 
 @end
 
@@ -24,6 +27,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)updateReadings:(id)sender {
+    
+    [[XivelyManager sharedInstance] requestUpdateWithCallback:^{
+//        self.humidityLabel.text = [NSString stringWithFormat:@"%.2f%%",[XivelyManager sharedInstance].humidity.currentValue];
+//        self.temperatureLabel.text = [NSString stringWithFormat:@"%.2f°",[XivelyManager sharedInstance].temperature.currentValue];
+    }];
+}
+
+- (IBAction)setTemperature:(id)sender {
+    [[XivelyManager sharedInstance] setDesiredTemperature:self.desiredTempField.text.doubleValue];
 }
 
 @end
