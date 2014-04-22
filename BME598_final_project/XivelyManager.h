@@ -20,6 +20,8 @@
 
 + (instancetype)sharedInstance;
 
+//these are getters but are somewhat unsafe to use (there may be no data)
 -(XivelyData *)temperature;
 -(XivelyData *)humidity;
+
 @end

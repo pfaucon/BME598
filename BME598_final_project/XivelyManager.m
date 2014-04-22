@@ -17,7 +17,7 @@
 {
     //TODO: Make this call asynchronous
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.xively.com/v2/feeds/%@.json?duration=6hours&interval=0",FEED_ID]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.xively.com/v2/feeds/%@.json?duration=1hours&interval=0",FEED_ID]];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setValue:API_KEY forHTTPHeaderField:@"X-ApiKey"];
@@ -58,11 +58,14 @@
     
     NSURLResponse * response = nil;
     NSError * error = nil;
-    NSData * requestData = [NSURLConnection sendSynchronousRequest:request
-                                                 returningResponse:&response
-                                                             error:&error];
+    //NSData * requestData =
+    [NSURLConnection sendSynchronousRequest:request
+                          returningResponse:&response
+                                      error:&error];
 
-    //react to whatever the server told us
+    //react to whatever the server told us, or ignore it since we are just putting data anyhow
+    if(!response)
+        NSLog(@"Error recieved:%@",error);
 }
 
 
@@ -76,12 +79,12 @@
 
 -(XivelyData *)temperature
 {
-    return self.datastreamReadings[@"temperature"];
+    return self.datastreamReadings[@"Temperature"];
 }
 
 -(XivelyData *)humidity
 {
-    return self.datastreamReadings[@"humidity"];
+    return self.datastreamReadings[@"Humidity"];
 }
 
 #pragma mark - singleton code

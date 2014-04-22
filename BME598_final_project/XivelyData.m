@@ -31,7 +31,7 @@
     self.currentTimepoint = [[XivelyTimepoint alloc] initWithData:[json[@"current_value"] doubleValue] andDateString:json[@"at"]];
     
     //try to parse out data points if they were present in the results
-    [self.timePoints addObject:self.currentTimepoint];
+    //[self.timePoints addObject:self.currentTimepoint];
     NSArray *pts = json[@"datapoints"];
     if(pts)
     {
@@ -41,6 +41,20 @@
             [self.timePoints addObject:point];
         }
     }
+}
+
+// return the maximum and minimum timepoints in the list of points
+// the "compare:" method we define compares based on timestamp
+-(NSDate *)maxTime
+{
+    XivelyTimepoint *max = [self.timePoints valueForKeyPath:@"@max.self"];
+    return [max timestamp];
+}
+
+-(NSDate *)minTime
+{
+    XivelyTimepoint *min = [self.timePoints valueForKeyPath:@"@min.self"];
+    return [min timestamp];
 }
 
 

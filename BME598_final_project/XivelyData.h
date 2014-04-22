@@ -13,8 +13,10 @@
 
 
 @property NSString *name;
-@property double maxValue;
-@property double minValue;
+@property (nonatomic) double maxValue;
+@property (nonatomic) double minValue;
+@property (nonatomic) NSDate *maxTime;
+@property (nonatomic) NSDate *minTime;
 
 @property XivelyTimepoint *currentTimepoint;
 @property (nonatomic) NSMutableArray *timePoints;

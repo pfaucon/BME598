@@ -23,7 +23,7 @@
     NSLocale *enUSPOSIXLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     
     [rfc3339DateFormatter setLocale:enUSPOSIXLocale];
-    [rfc3339DateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+    [rfc3339DateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSSSS'Z'"];
     [rfc3339DateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     
     // Convert the RFC 3339 date time string to an NSDate.
@@ -42,6 +42,11 @@
     return  self;
 }
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"%@ : %f",self.timestamp,self.value];
+}
+
 #pragma mark - methods to help with comparisons
 
 // two timepoints are equal if their occurence time is equal
@@ -56,6 +61,13 @@
 
 - (NSComparisonResult)compare:(XivelyTimepoint *)object {
     return [self.timestamp compare:object.timestamp];
+}
+- (NSComparisonResult)compareData:(XivelyTimepoint *)object {
+    if(self.value > object.value)
+        return 1;
+    if (self.value == object.value)
+        return 0;
+    return -1;
 }
 
 @end
