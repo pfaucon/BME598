@@ -581,6 +581,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BME598_final_project/BME598_final_project-Prefix.pch";
 				INFOPLIST_FILE = "BME598_final_project/BME598_final_project-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BME598_final_project",
@@ -599,6 +600,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BME598_final_project/BME598_final_project-Prefix.pch";
 				INFOPLIST_FILE = "BME598_final_project/BME598_final_project-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BME598_final_project",

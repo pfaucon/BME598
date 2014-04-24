@@ -10,6 +10,12 @@
 
 #define API_KEY @"0w33jetxLfPW09GeAMfQLJ0MXCZf87UUcz8GSn9AYP93TB5N"
 #define FEED_ID @"566430076"
+#define TIMER_INTERVAL 10 //update once per minute
+
+@interface XivelyManager()
+@property NSTimer* timer;
+
+@end
 
 @implementation XivelyManager
 
@@ -87,6 +93,15 @@
     return self.datastreamReadings[@"Humidity"];
 }
 
+-(void)update:(NSTimer *)timer
+{
+    NSLog(@"PING!\n");
+    [self requestUpdateWithCallback:^{
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"XivelyManagerDataUpdate"
+         object:self];
+    }];
+}
 #pragma mark - singleton code
 static XivelyManager *sharedInstance = nil;
 
@@ -106,6 +121,9 @@ static XivelyManager *sharedInstance = nil;
     
     if (self) {
         // Work your initialising magic here as you normally would
+        
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_INTERVAL target:self selector:@selector(update:) userInfo:nil repeats:YES];
+        
     }
     
     return self;
@@ -115,6 +133,11 @@ static XivelyManager *sharedInstance = nil;
 // Equally, we don't want to generate multiple copies of the singleton.
 - (id)copyWithZone:(NSZone *)zone {
     return self;
+}
+
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
