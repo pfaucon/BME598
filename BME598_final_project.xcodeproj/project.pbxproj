@@ -439,6 +439,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = ASU;
 				TargetAttributes = {
+					99569C5518FF36D600A211F3 = {
+						DevelopmentTeam = BWSLUFSJRA;
+					};
 					99569C7618FF36D600A211F3 = {
 						TestTargetID = 99569C5518FF36D600A211F3;
 					};
@@ -630,6 +633,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BME598_final_project/BME598_final_project-Prefix.pch";
 				INFOPLIST_FILE = "BME598_final_project/BME598_final_project-Info.plist";
@@ -640,6 +645,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = iBaby;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -649,6 +655,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BME598_final_project/BME598_final_project-Prefix.pch";
 				INFOPLIST_FILE = "BME598_final_project/BME598_final_project-Info.plist";
@@ -659,6 +667,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = iBaby;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

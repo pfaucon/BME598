@@ -46,6 +46,7 @@
     [self.dataManager requestUpdateWithCallback:^{
         
         [self configureData];
+        [self updateData];
         [self.hostView.hostedGraph reloadData];
     }];
 }
@@ -137,6 +138,15 @@
     axisSet.xAxis.majorTickLength = 7.0f;
     axisSet.xAxis.labelOffset = 3.0f;
     
+    axisSet.xAxis.title = @"time of day";
+    axisSet.xAxis.titleOffset = -15;
+    
+    
+    NSString *selected = [self.graphSelector titleForSegmentAtIndex:self.graphSelector.selectedSegmentIndex];
+
+    axisSet.yAxis.title = selected;
+    axisSet.yAxis.titleOffset = -20;
+    
     // added for date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     //dateFormatter.dateStyle = kCFDateFormatterShortStyle;
@@ -176,6 +186,13 @@
     xSquaredPlot.plotSymbol = greenCirclePlotSymbol;
     
     // add plot to graph
+    graph.paddingBottom = 10;
+    graph.paddingLeft = 10;
+    graph.paddingRight = 10;
+    graph.paddingTop = 10;
+    
+    graph.plotAreaFrame.paddingRight = 20;
+    
     [graph addPlot:xSquaredPlot];
     
     CGAffineTransform normalFlip = CGAffineTransformMakeScale(1,1);
