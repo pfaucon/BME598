@@ -15,6 +15,9 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *graphSelector;
 
 @property (strong, nonatomic) IBOutlet UITextField *setTemperatureTextField;
+
+@property int delayAlerts;
+@property (nonatomic)  NSDate *delayStart;
 @end
 
 @implementation CorePlotExampleViewController
@@ -57,18 +60,22 @@
         
     }];
     
-//    [NSTimer scheduledTimerWithTimeInterval:.1 target:self selector:@selector(updateData) userInfo:Nil repeats:YES];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateData)
                                                  name:@"XivelyManagerDataUpdate"
                                                object:nil];
+    
+    // if the data manager gets a new temperature see if it is in range
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkTempOutOfRange)
+                                                 name:@"XivelyManagerDataUpdate"
+                                               object:nil];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
     [self updateData];
 }
 
@@ -133,8 +140,9 @@
     // added for date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     //dateFormatter.dateStyle = kCFDateFormatterShortStyle;
-    dateFormatter.dateStyle = kCFDateFormatterNoStyle;
-    dateFormatter.timeStyle = kCFDateFormatterShortStyle;
+    //dateFormatter.dateStyle = kCFDateFormatterNoStyle;
+    //dateFormatter.timeStyle = kCFDateFormatter;
+    [dateFormatter setDateFormat:@"HH:mm"];
     CPTTimeFormatter *timeFormatter = [[CPTTimeFormatter alloc] initWithDateFormatter:dateFormatter];
     timeFormatter.referenceDate = refDate;
     axisSet.xAxis.labelFormatter = timeFormatter;
@@ -188,6 +196,8 @@
     // This method is actually called twice per point in the plot, one for the X and one for the Y value
     if(fieldEnum == CPTScatterPlotFieldX)
     {
+        if(self.currentData.timePoints.count <2)
+            return [NSNumber numberWithDouble:0];
         if(index ==-1)
             return [NSNumber numberWithDouble:0];
         if(index == self.currentData.timePoints.count)
@@ -197,6 +207,8 @@
         double baseline = [[[NSDate date] dateByAddingTimeInterval:-oneHour*NUMBER_OF_HOURS ] timeIntervalSince1970];
         return [NSNumber numberWithDouble:(timestamp-baseline)];
     } else {
+        if(self.currentData.timePoints.count <2)
+            return [NSNumber numberWithDouble:self.currentData.currentTimepoint.value];
         if(index ==-1)
             return [NSNumber numberWithDouble:((XivelyTimepoint *)self.currentData.timePoints[1]).value];
         if(index == self.currentData.timePoints.count)
@@ -213,12 +225,58 @@
     [self.dataManager setDesiredTemperature:self.setTemperatureTextField.text.doubleValue];
 }
 
+
+//if the temperature is above 37c then inform the attending nurse
+-(void) checkTempOutOfRange
+{
+    
+    BOOL outOfRange = NO;
+    NSString *errorMsg = @"All clear!";
+    
+    if([XivelyManager sharedInstance].temperature.currentTimepoint.value >37)
+    {
+        outOfRange = true;
+        errorMsg = @"the incubator is too hot!";
+    }
+    
+    //it should be around 36.5, but we don't have a heating element so it will be cooler than that
+    if([XivelyManager sharedInstance].temperature.currentTimepoint.value <25)
+    {
+        outOfRange = true;
+        errorMsg = @"the incubator is too cold!";
+    }
+    
+    if(outOfRange && [[NSDate date] timeIntervalSinceDate:self.delayStart] >60)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incubator temp out of range!" message:errorMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"snooze alerts", nil];
+        [alert show];
+    }
+    
+}
+
+#pragma mark - Alert View Delegation
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == alertView.firstOtherButtonIndex)
+    {
+        self.delayAlerts = 10;
+        self.delayStart = [NSDate date];
+    }
+}
+
 #pragma mark - lazy instantiator
 -(XivelyManager *) dataManager
 {
     //if we weren't told which manager to use then use the global (only) one
     if(!_dataManager) _dataManager = [XivelyManager sharedInstance];
     return _dataManager;
+}
+
+-(NSDate *) delayStart
+{
+    if(!_delayStart) _delayStart = [[NSDate alloc] initWithTimeIntervalSince1970:0];
+    return _delayStart;
 }
 
 @end

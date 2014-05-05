@@ -27,6 +27,17 @@
 		99569C8518FF36D600A211F3 /* BME598_final_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99569C8418FF36D600A211F3 /* BME598_final_projectTests.m */; };
 		99569C9018FF372200A211F3 /* XivelyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99569C8F18FF372200A211F3 /* XivelyManager.m */; };
 		99569C9318FF3DC000A211F3 /* XivelyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 99569C9218FF3DC000A211F3 /* XivelyData.m */; };
+		9962AA6F19182824008767EE /* baby_original.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6619182824008767EE /* baby_original.jpeg */; };
+		9962AA7019182824008767EE /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6719182824008767EE /* Icon-40.png */; };
+		9962AA7119182824008767EE /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6819182824008767EE /* Icon-40@2x.png */; };
+		9962AA7219182824008767EE /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6919182824008767EE /* Icon-60.png */; };
+		9962AA7319182824008767EE /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6A19182824008767EE /* Icon-60@2x.png */; };
+		9962AA7419182824008767EE /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6B19182824008767EE /* Icon-76.png */; };
+		9962AA7519182824008767EE /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6C19182824008767EE /* Icon-76@2x.png */; };
+		9962AA7619182824008767EE /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6D19182824008767EE /* Icon-Small.png */; };
+		9962AA7719182824008767EE /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA6E19182824008767EE /* Icon-Small@2x.png */; };
+		9962AA7E19182C9F008767EE /* success_kid3.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA7C19182C9F008767EE /* success_kid3.5@2x.png */; };
+		9962AA7F19182C9F008767EE /* success_kid4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9962AA7D19182C9F008767EE /* success_kid4@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +136,7 @@
 		99332ACF1900FD7500529337 /* NSCoderExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCoderExtensions.h; sourceTree = "<group>"; };
 		99332AD01900FD7500529337 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		99332AD11900FD7500529337 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
-		99569C5618FF36D600A211F3 /* BME598_final_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BME598_final_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99569C5618FF36D600A211F3 /* iBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99569C5918FF36D600A211F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99569C5B18FF36D600A211F3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		99569C5D18FF36D600A211F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -146,6 +157,17 @@
 		99569C8F18FF372200A211F3 /* XivelyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XivelyManager.m; sourceTree = "<group>"; };
 		99569C9118FF3DC000A211F3 /* XivelyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XivelyData.h; sourceTree = "<group>"; };
 		99569C9218FF3DC000A211F3 /* XivelyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XivelyData.m; sourceTree = "<group>"; };
+		9962AA6619182824008767EE /* baby_original.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baby_original.jpeg; sourceTree = "<group>"; };
+		9962AA6719182824008767EE /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		9962AA6819182824008767EE /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		9962AA6919182824008767EE /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		9962AA6A19182824008767EE /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		9962AA6B19182824008767EE /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		9962AA6C19182824008767EE /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		9962AA6D19182824008767EE /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		9962AA6E19182824008767EE /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		9962AA7C19182C9F008767EE /* success_kid3.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success_kid3.5@2x.png"; sourceTree = "<group>"; };
+		9962AA7D19182C9F008767EE /* success_kid4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success_kid4@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +297,7 @@
 		99569C5718FF36D600A211F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99569C5618FF36D600A211F3 /* BME598_final_project.app */,
+				99569C5618FF36D600A211F3 /* iBaby.app */,
 				99569C7718FF36D600A211F3 /* BME598_final_projectTests.xctest */,
 			);
 			name = Products;
@@ -311,6 +333,7 @@
 		99569C6018FF36D600A211F3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9962AA6519182824008767EE /* 02 */,
 				99332A781900FC0000529337 /* libCorePlot-CocoaTouch.a */,
 				99569C6118FF36D600A211F3 /* BME598_final_project-Info.plist */,
 				99569C6218FF36D600A211F3 /* InfoPlist.strings */,
@@ -351,6 +374,24 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		9962AA6519182824008767EE /* 02 */ = {
+			isa = PBXGroup;
+			children = (
+				9962AA7C19182C9F008767EE /* success_kid3.5@2x.png */,
+				9962AA7D19182C9F008767EE /* success_kid4@2x.png */,
+				9962AA6619182824008767EE /* baby_original.jpeg */,
+				9962AA6719182824008767EE /* Icon-40.png */,
+				9962AA6819182824008767EE /* Icon-40@2x.png */,
+				9962AA6919182824008767EE /* Icon-60.png */,
+				9962AA6A19182824008767EE /* Icon-60@2x.png */,
+				9962AA6B19182824008767EE /* Icon-76.png */,
+				9962AA6C19182824008767EE /* Icon-76@2x.png */,
+				9962AA6D19182824008767EE /* Icon-Small.png */,
+				9962AA6E19182824008767EE /* Icon-Small@2x.png */,
+			);
+			path = 02;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,7 +409,7 @@
 			);
 			name = BME598_final_project;
 			productName = BME598_final_project;
-			productReference = 99569C5618FF36D600A211F3 /* BME598_final_project.app */;
+			productReference = 99569C5618FF36D600A211F3 /* iBaby.app */;
 			productType = "com.apple.product-type.application";
 		};
 		99569C7618FF36D600A211F3 /* BME598_final_projectTests */ = {
@@ -427,9 +468,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9962AA6F19182824008767EE /* baby_original.jpeg in Resources */,
+				9962AA7619182824008767EE /* Icon-Small.png in Resources */,
 				99569C7218FF36D600A211F3 /* Images.xcassets in Resources */,
+				9962AA7E19182C9F008767EE /* success_kid3.5@2x.png in Resources */,
+				9962AA7F19182C9F008767EE /* success_kid4@2x.png in Resources */,
 				99569C6418FF36D600A211F3 /* InfoPlist.strings in Resources */,
+				9962AA7119182824008767EE /* Icon-40@2x.png in Resources */,
 				99569C6D18FF36D600A211F3 /* Main.storyboard in Resources */,
+				9962AA7219182824008767EE /* Icon-60.png in Resources */,
+				9962AA7019182824008767EE /* Icon-40.png in Resources */,
+				9962AA7319182824008767EE /* Icon-60@2x.png in Resources */,
+				9962AA7719182824008767EE /* Icon-Small@2x.png in Resources */,
+				9962AA7519182824008767EE /* Icon-76@2x.png in Resources */,
+				9962AA7419182824008767EE /* Icon-76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +639,7 @@
 					"$(PROJECT_DIR)/BME598_final_project",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iBaby;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -606,7 +658,7 @@
 					"$(PROJECT_DIR)/BME598_final_project",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iBaby;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

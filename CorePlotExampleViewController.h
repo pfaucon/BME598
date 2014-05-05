@@ -5,7 +5,7 @@
 #import "XivelyData.h"
 #import "XivelyTimepoint.h"
 
-@interface CorePlotExampleViewController : UIViewController <CPTPlotDataSource>
+@interface CorePlotExampleViewController : UIViewController <CPTPlotDataSource,UIAlertViewDelegate>
 
 
 @property (nonatomic) XivelyManager *dataManager;
